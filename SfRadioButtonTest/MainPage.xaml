@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SfRadioButtonTest.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:buttons="http://schemas.syncfusion.com/maui">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="185"
+                SemanticProperties.Description="dot net bot in a race car number eight"
+                Source="dotnet_bot.png" />
+
+            <buttons:SfRadioGroup
+                BackgroundColor="{DynamicResource White}"
+                HorizontalOptions="Start"
+                IsVisible="True"
+                Orientation="Vertical"
+                RadioButtonGroup.GroupName="ArrowDiameterSelection"
+                VerticalOptions="Fill">
+                <buttons:SfRadioButton
+                    x:Name="DefaultRadioButton"
+                    CheckedColor="{DynamicResource Black}"
+                    FontSize="16"
+                    HorizontalOptions="Fill"
+                    IsChecked="True"
+                    Text="Use App Default (Recommended)"
+                    TextColor="{DynamicResource Black}"
+                    UncheckedColor="{DynamicResource Black}"
+                    VerticalOptions="Fill" />
+                <buttons:SfRadioButton
+                    x:Name="CopyRadioButton"
+                    CheckedColor="{DynamicResource Black}"
+                    FontSize="16"
+                    HorizontalOptions="Fill"
+                    Text="Copy from Setup or Enter Value"
+                    TextColor="{DynamicResource Black}"
+                    UncheckedColor="{DynamicResource Black}"
+                    VerticalOptions="Fill" />
+
+            </buttons:SfRadioGroup>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
