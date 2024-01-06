@@ -13,7 +13,11 @@
                 SemanticProperties.Description="dot net bot in a race car number eight"
                 Source="dotnet_bot.png" />
 
+            <Label Text="RadioGroup CheckedItem Binding:" />
+            <Label BindingContext="{x:Reference RadioGroup}" Text="{Binding Path=CheckedItem.Text, FallbackValue=''}" />
+
             <buttons:SfRadioGroup
+                x:Name="RadioGroup"
                 BackgroundColor="{DynamicResource White}"
                 HorizontalOptions="Start"
                 IsVisible="True"
